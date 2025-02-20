@@ -1,1 +1,152 @@
-<h1>Hello</h1>
+  <!-- TO RUN IN BROWSER:
+    1. Install vscode extension Name: open in `browser open-in-browser` by TechER
+    2. Right click html file and either run in default browser or another browser
+  -->
+
+  <!DOCTYPE html>
+    <html>
+        <link rel = "stylesheet" href="styles.css">
+        <head>
+        <title>Accessible Components</title>
+        </head>
+        <body>
+
+            <div class="header">
+                <h1>Case Study</h1>
+                <h2 style="color:white">Accessible Components</h2>
+            </div>
+            <div style="margin:50px;">
+                <h2> Background</h2>
+                <p>
+                    In today's world where you can find anything and everything online, dropdown menus have become essential for categorizing data and simplifying UIs. Although they are vital to many interfaces, they can be suboptimal for many users. In this project, I aimed to create a better dropdown menu for a popular website. Keeping in mind accessibility for a range of users.
+                </p>
+            </div>
+
+            <div style="margin:50px; margin-bottom:550px;">
+                <h2> Popular Examples</h2>
+                <div >
+                    <section>
+                        <img src="./assets/google_drive.png" class="center"height="400px"/>
+                        <h3 style="text-align: center" >Google Drive: Webpage</h3>
+                    </section>
+                        
+                    <section>
+                        <img src="./assets/spotify_closeup.png" class="center" height="400px"/>
+                        <h3 style="text-align: center" >Spotify: Desktop Application</h3>
+                    </section>
+                        
+                    <section>
+                        <img src="./assets/instagram.JPG" class="center" height="400px"/>
+                        <h3 style="text-align: center" >Instagram: Mobile Application</h3>
+                    </section>
+                </div>
+            </div>
+
+            <div style="margin:50px;">
+                <h2> Inputs</h2>
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <th></th>
+                            <th>Google Drive</th>
+                        <th>Spotify</th>
+                        <th>Instagram</th>
+                      </tr>
+                      <tr>
+                            <th>Mouse Input</td>
+                            <td>The dropdown activates when the user presses on the menu item. It doesn't appear on the hover, which makes the page neater. It also doesn't disappear when the user's mouse hovers off the menu.</td>
+                            <td>This acts similarly to the Google Drive one. However, there are few indications that this is actually a dropdown. The text is not stylized like the other buttons on the page and its grey color doesn't draw any attention to it.</td>
+                            <td>On Instagram's webpage, the Create dropdown is on the left side of the page with many other menu items. Most of the other items in this menu are not dropdowns, so it may not be immediately clear that this button is a dropdown to a new user.</td>
+                        </tr>
+                        <tr>
+                            <th>Keyboard Input</td>
+                            <td>User's using the keyboard input instead of a mouse or trackpad can easily tab to the dropdown and press enter to expand the dropdown. It's nice that the dropdown doesn't automatically open when a user is navigating the site as it saves energy for the user.</td>
+                            <td>On both the Spotify app and webpage, users can tab to this Recents dropdown to arrange their playlists to their preferences. Once the dropdown is opened the whole inner section is highlighted, which seems like a flaw since pressing enter in this state doesn't change anything.</td>
+                            <td>Just like the other two examples, the Instagram website can be easily tabbed through to reach this dropdown. Once a user gets there, they simply click enter to open the menu options, which seems like the standard for applications.</td>
+                        </tr>
+                        <tr>
+                            <th>Touch Input</th>
+                            <td>Pressing the same button on the Google Drive app causes a menu to open up from the bottom of the page, similar to the image from the Instagram mobile application. There is a clear close button since the menu doesn't open near the Type button.</td>
+                            <td>The Spotify app has split the Sort By and View As buttons into two separate buttons on their mobile application. The Sort By button similarly opens a menu from the bottom of the screen, while the View As button works as a toggle between the list and grid states.</td>
+                            <td>The plus button opens the Create menu at the bottom of the screen. There are many more options to pick from on the mobile application than on the webstie, which shows that this application is meant to be used on a mobile device.</td>
+                        </tr>
+                     </table>
+                </div>
+            </div>
+
+            <div style="margin:50px;">
+                <h2> Outputs</h2>
+                <div>
+                    <table width="100%">
+                        <tr>
+                            <th></th>
+                            <th>Google Drive</th>
+                        <th>Spotify</th>
+                        <th>Instagram</th>
+                      </tr>
+                      <tr>
+                            <th>Mouse Input</td>
+                            <td>The dropdown menu button becomes lighter on hover to indicate that it should be pressed. Similarly the items in the menu--once opened--also become lighter upon hover to indicate they should be pressed.</td>
+                            <td>Although the menu is not button shaped, the text and symbol turn white and expand a little on hover to let the user know they are clickable. However, I feel this can be easily missed if someone never hovers on it.</td>
+                            <td>The menu item similarly lightens on hover to show interactivity. The dropdown being part of another menu covers some of the other options in the menu.</td>
+                        </tr>
+                        <tr>
+                            <th>Keyboard Input</td>
+                            <td>As the user navigates the page items become lighter and get a blue border around them. It works exactly the same as the mouse input which is good.</td>
+                            <td>Both the website and the desktop app make the button text white and expand the icon slightly just as the mouse input reaction.</td>
+                            <td>On Instagram's website, instead of lighting the dropdown menu on tab, it just puts the blue border around the button. This is a little less clear than the lightening of the element.</td>
+                        </tr>
+                        <tr>
+                            <th>Touch Input</th>
+                            <td>Since there is no hover state for mobile applications, the state of the dropdown meny only changes upon press.</td>
+                            <td>As mentioned, this button is split into two different ones on the mobile application, which react to touch.</td>
+                            <td>Similarly to the other two, the menu only react to presss since there is no hover state.</td>
+                        </tr>
+                     </table>
+                </div>
+            </div>
+            
+            <div style="margin:50px;">
+                <h2> State Models</h2>
+                <img src="./assets/state_models_original.png" class="center" width="100%"/>
+            </div>
+
+            <div style="margin:50px;">
+                <h2> Revised</h2>
+                <img src="./assets/state_models_revised.png" class="center" width="100%"/>
+            </div>
+            
+            <div style="margin:50px;">
+                <h2>Prototyping</h2>
+                <h3>Motivation</h3>
+                <p>
+                    The dropdown I decided to redesign is the Spotify one. I think that the current design is unintuitive. Below is an image of the entire Spotify desktop app, and we can see that the Recents button on the left is quite hidden. 
+                    From not looking like a button to the weird mix of an unrelated text with an unrelated icon to it having two uses, I think there is a design that could be much better. 
+                </p>
+                <img src="./assets/spotify_full.png" class="center" width="800px"/>
+                <h3>Planning</h3>
+                <p>
+                    I believe that the mobile app, making this dropdown into two separate buttons/dropdowns is really effective. It allows each button to standalone from the other and function separately.
+                    
+                    To maintain continuity, I decided to use two icons instead of words, since that matches the search icon on the left side. I used a pretty universal sort icon and kept the same view icon as in the original design.
+                    Once either button is clicked, they turn into Xs, to indicate that the user can click (or enter) on it to collapse the dropdown.
+                </p>
+                <img src="./assets/sketches.jpg" class="center" width="1200px"/>
+            </div>
+
+            <div style="margin:50px;">
+                <h2>Redesign</h2>
+                <img src="./assets/redesign.png" class="center" width="100%"/>
+            </div>
+
+            <div style="margin:50px;">
+                <h2>Reflection</h2>
+                <p>
+                    I think dropdown menus are generally pretty accessible. It becomes harder to traverse menus when they contain a lot of subcategories, like in the Google Drive example. Even more for keyboard users since they have to use the arrow keys to select what they want instead of simply moving a mouse.
+                    However, if a meny contains really small menu items, a mouse user could easily click the wrong item due to a mouse slip. Instead using a keyboard would be more accurate at preventing misclicks in this scenario.
+                    There should be more intuitive ways to close a dropdown menu, than just clicking off the menu. For this reason, I included a collapse button in my redesign. Looking at the applications I chose to disect for the input and output comparison, both Google Drive seems to have optimized for the mouse user, Spotify equally for mouse and touch, while Instagram has very clearly optimized for the touch user.
+                    This makes a lot of sense when you consider who uses these applications and when. Google Drive is primarily used on computers, Spotify is used largely on computers and phones, and Instagram almost solely on phones.
+                </p>
+            </div>
+        </body>
+    </html>
